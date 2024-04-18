@@ -23,13 +23,49 @@ util.execute_type_cmd = function(type, terminals, override)
   local dims = type ~= "float" and util.get_split_dims(type, opts.split_ratio) or util.calc_float_opts(opts)
   dims = override and "" or dims
   local type_cmds = {
-    horizontal = function()
+    horizontal_1 = function()
       vim.cmd(opts.location .. dims .. " split")
     end,
-    vertical = function()
+    horizontal_2 = function()
+      vim.cmd(opts.location .. dims .. " split")
+    end,
+    horizontal_3 = function()
+      vim.cmd(opts.location .. dims .. " split")
+    end,
+    horizontal_4 = function()
+      vim.cmd(opts.location .. dims .. " split")
+    end,
+    horizontal_5 = function()
+      vim.cmd(opts.location .. dims .. " split")
+    end,
+    vertical_1 = function()
       vim.cmd(opts.location .. dims .. " vsplit")
     end,
-    float = function()
+    vertical_2 = function()
+      vim.cmd(opts.location .. dims .. " vsplit")
+    end,
+    vertical_3 = function()
+      vim.cmd(opts.location .. dims .. " vsplit")
+    end,
+    vertical_4 = function()
+      vim.cmd(opts.location .. dims .. " vsplit")
+    end,
+    vertical_5 = function()
+      vim.cmd(opts.location .. dims .. " vsplit")
+    end,
+    float_1 = function()
+      a.nvim_open_win(0, true, dims)
+    end,
+    float_2 = function()
+      a.nvim_open_win(0, true, dims)
+    end,
+    float_3 = function()
+      a.nvim_open_win(0, true, dims)
+    end,
+    float_4 = function()
+      a.nvim_open_win(0, true, dims)
+    end,
+    float_5 = function()
       a.nvim_open_win(0, true, dims)
     end,
   }

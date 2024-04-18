@@ -1,19 +1,32 @@
 local M = {}
 
+local float_config = {
+  relative = "editor",
+  row = 0.3,
+  col = 0.25,
+  width = 0.5,
+  height = 0.4,
+  border = "single",
+}
 local defaults = {
   terminals = {
     list = {},
     type_opts = {
-      float = {
-        relative = "editor",
-        row = 0.3,
-        col = 0.25,
-        width = 0.5,
-        height = 0.4,
-        border = "single",
-      },
-      horizontal = { location = "rightbelow", split_ratio = 0.3 },
-      vertical = { location = "rightbelow", split_ratio = 0.5 },
+      float_1 = float_config,
+      float_2 = float_config,
+      float_3 = float_config,
+      float_4 = float_config,
+      float_5 = float_config,
+      horizontal_1 = { location = "rightbelow", split_ratio = 0.3 },
+      horizontal_2 = { location = "rightbelow", split_ratio = 0.3 },
+      horizontal_3 = { location = "rightbelow", split_ratio = 0.3 },
+      horizontal_4 = { location = "rightbelow", split_ratio = 0.3 },
+      horizontal_5 = { location = "rightbelow", split_ratio = 0.3 },
+      vertical_1 = { location = "rightbelow", split_ratio = 0.5 },
+      vertical_2 = { location = "rightbelow", split_ratio = 0.5 },
+      vertical_3 = { location = "rightbelow", split_ratio = 0.5 },
+      vertical_4 = { location = "rightbelow", split_ratio = 0.5 },
+      vertical_5 = { location = "rightbelow", split_ratio = 0.5 },
     },
   },
   behavior = {
